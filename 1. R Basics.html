@@ -512,7 +512,7 @@ print(greeting)</code></pre>
 <pre><code>## [1] &quot;Hello there!&quot;</code></pre>
 <p><br></p>
 <ol start="3" style="list-style-type: decimal">
-<li>Use the magrittr pipe to chagne an existing object</li>
+<li>Use the <strong>magrittr</strong> pipe to change an existing object</li>
 </ol>
 <p><em>Code</em>: <code>df %&lt;&gt;% function(argument)</code></p>
 <p><em>Example</em>: <code>data %&lt;&gt;% select(id, score)</code></p>
@@ -3326,18 +3326,18 @@ print(inf_vector)</code></pre>
 </ul>
 <p><em>Basic Example</em>:</p>
 <pre class="r"><code>sample(1:10, 3)</code></pre>
-<pre><code>## [1]  1  2 10</code></pre>
+<pre><code>## [1] 5 1 9</code></pre>
 <p><em>Example with Replacement</em></p>
 <pre class="r"><code>sample(0:1, 
        30, 
        replace = TRUE)</code></pre>
-<pre><code>##  [1] 0 0 0 1 1 0 1 1 0 0 1 0 0 1 0 0 0 0 1 0 0 0 1 1 1 0 1 1 1 0</code></pre>
+<pre><code>##  [1] 1 0 1 0 1 1 1 0 0 1 1 0 0 1 0 0 0 1 1 1 1 1 1 0 0 0 1 0 0 0</code></pre>
 <p><em>Example with Probabilites</em>:</p>
 <pre class="r"><code>sample(0:1, 
        30, 
        replace = TRUE,
        prob = c(0.2, 0.8))</code></pre>
-<pre><code>##  [1] 1 1 1 1 1 1 0 1 1 0 1 0 1 1 0 1 1 1 1 1 0 1 1 1 1 0 1 1 1 0</code></pre>
+<pre><code>##  [1] 1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 0 1 0 1 1 1 1 0 1 0 1 0 1</code></pre>
 <p><br> <br></p>
 </div>
 <div id="sample-data-frame-rows" class="section level4">
@@ -3352,20 +3352,20 @@ print(inf_vector)</code></pre>
 <p>Let’s sample 3 rows from the <em>data</em> data frame, without replacement.</p>
 <pre class="r"><code>sample_n(data, 3)</code></pre>
 <pre><code>##     id score grade  color      teacher
-## 1 s300    90     9 yellow Ms. Wellberg
-## 2 s400    80     9  green   Mr. Stangl
+## 1 s100    85    10    red   Mr. Stangl
+## 2 s600    75     9 purple Ms. Wellberg
 ## 3 s200    95    10 orange Ms. Wellberg</code></pre>
 <p><br></p>
 <p>If you want to randomly shuffle the entries in a data frame, simply sample as many rows as the data frame has without replacement.</p>
 <p><em>Example</em>:</p>
 <pre class="r"><code>sample_n(data, nrow(data))</code></pre>
 <pre><code>##     id score grade  color      teacher
-## 1 s500    70    10   blue   Mr. Stangl
-## 2 s100    85    10    red   Mr. Stangl
-## 3 s400    80     9  green   Mr. Stangl
+## 1 s600    75     9 purple Ms. Wellberg
+## 2 s500    70    10   blue   Mr. Stangl
+## 3 s100    85    10    red   Mr. Stangl
 ## 4 s300    90     9 yellow Ms. Wellberg
 ## 5 s200    95    10 orange Ms. Wellberg
-## 6 s600    75     9 purple Ms. Wellberg</code></pre>
+## 6 s400    80     9  green   Mr. Stangl</code></pre>
 </div>
 </div>
 </div>
